@@ -5,6 +5,73 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(77, 11, 6);
+
+    z-index: 999999;
+
+    position: absolute;
+}
+  
+.spinner {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1.5s linear infinite;
+}
+  
+.spinner:before,
+.spinner:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+  
+.spinner:before {
+    background-color: burlywood;
+    opacity: 0.2;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+  
+  .spinner:after {
+    background-color: rgb(192, 141, 75);
+    animation: pulse 0.75s ease-in-out infinite;
+}
+  
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+}  
+
 body {
     width: 100%;
     height: auto;
@@ -15,7 +82,11 @@ body {
     margin: 0;
     padding: 0;
 
+    background-color: rgb(97, 16, 10);
+
+/*
     background-color: rgb(77, 1, 1);
+*/
 }
 
 body::-webkit-scrollbar {
@@ -64,7 +135,7 @@ header p {
 
 #copia_header {
 
-    background-color: rgb(77, 1, 1);
+    background-color: rgb(77, 11, 6);
     border-bottom: black solid 5px;
 
     width: 100%;
@@ -113,7 +184,7 @@ header p {
 
     100% {
         opacity: 1;
-        transform: translateX(0) translateY(10%);
+        transform: translateX(0) translateY(12%);
     }
 }
 
@@ -134,7 +205,7 @@ header p {
 
     100% {
         opacity: 1;
-        transform: translateX(0) translateY(-100%);
+        transform: translateX(0) translateY(-200%);
     }
 }
 
@@ -160,38 +231,6 @@ header p {
 
 #curriculo ul {
     margin-left: 15px;
-}
-
-@media print {
-    #curriculo {
-        width: 210mm;
-        height: 287mm;
-
-        margin: 0 auto;
-
-        top: -10%;
-
-        border: none;
-
-        box-shadow: none;
-
-        padding: 20px;
-        box-sizing: border-box;
-
-        page-break-before: auto;
-    }
-
-    body {
-        background-color: #fff;
-    }
-
-    header {
-        display: none;
-    }
-
-    #porta_imprimir {
-        display: none;
-    }
 }
 
 #botoes_papel {
@@ -248,7 +287,7 @@ header p {
 section {
     max-width: 800px;
 
-    margin: 2rem auto;
+    margin: 1rem auto;
 
     padding: 1.5rem;
 
@@ -256,13 +295,12 @@ section {
 }
 
 section h2 {
-    font-size: 2rem;
     color: black;
     margin-bottom: 1rem;
 }
 
 section p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.8;
 }
 
@@ -282,7 +320,9 @@ section p {
 
 #about {
     width: 80%;
+
     text-align: justify;
+
     background-color: burlywood;
     border: rgb(61, 42, 16) solid 5px;
     box-shadow: inset 0 0 18px 1px black,  2px 5px 5px black;
@@ -306,7 +346,6 @@ section p {
 
 #buttons button {
     border-radius: 50%;
-    border: none;
     width: 70px;
     height: 70px;
     padding: 5px;
@@ -448,7 +487,8 @@ footer {
     text-align: center;
     padding: 1rem;
     color: #fff;
-    position: fixed;
+
+    margin-top: 130px;
     bottom: 0;
 }
 
@@ -458,54 +498,124 @@ footer a {
 }
 
 @media (max-width: 720px) {
+
+    section h2 {
+        font-size: 22px;
+    }
+
     #porta_imprimir {
-        width: 78%;
+        width: 95%;
+    }
+
+    #buttons {
+        gap: 15px;
     }
 
     #buttons button {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
+
+        padding: 5px;
+
+        text-align: center;
+
+        border: rgb(153, 134, 107) solid 3px;
+
+        background-color: rgb(233, 211, 182);
+
+        box-shadow: inset 0 0 12px 1px black, 5px 6px 5px 3px rgba(0, 0, 0, 0.616);
     }
 
     #buttons i {
-        font-size: 22px;
+        font-size: 18px;
+
+        opacity: 80%;
+    }
+
+    .popup {
+        background-color: rgb(233, 211, 182);
+    }
+
+    #about {
+        width: 95%;
+
+        background-color: rgb(233, 211, 182);
+    }
+
+    #about p {
+        font-size: 9.5px;
     }
 
     #skills {
         top: 45%;
+
+        width: 95%;
+
         display: flex;
         flex-wrap: wrap;
+
         list-style: none;
         padding: 0;
         margin: 0;
+
         justify-content: center;
         align-items: center;
         text-align: center;
     }
 
     #skills li {
-        width: 50%; /* Cada item ocupa metade da largura */
+        width: 50%;
         box-sizing: border-box;
         padding: 5px;
     }
 
     #experience {
-        width: 85%;
-        top: 40%;
+        top: 50%;
+
+        width: 95%;
+        height: 70vh;
+
+        font-size: 12px;
+    }
+
+    #box_xp {
+        text-align:left;
+
+        width: 100%;
+        height: 50vh;
+
+        overflow: auto;
+    }
+
+    #box_xp p {
+        width: 100%;
+
+        margin-bottom: 10px;
+
+        text-align: justify;
     }
 
     #education {
-        width: 85%;
+        width: 95%;
         top: 40%;
+    }
+
+    #botoes_slide {
+        bottom: 3px;
     }
 
     #contact {
-        width: 80%;
-        top: 40%;
+        width: 95%;
+        top: 50%;
+    }
+
+    #contact p {
+        width: 100%;
+        text-align: justify;
     }
 
     #curriculo {
-        width: 75%;
+        width: 93%;
     }
 
     #curriculo h1 {
@@ -534,6 +644,11 @@ footer a {
         padding: 5px;
     }
 
+    footer {
+        font-size: 10px;
+        margin-top: 50px;
+    }
+
     @keyframes papelAnimado {
         0% {
             opacity: 1;
@@ -542,21 +657,81 @@ footer a {
 
         100% {
             opacity: 1;
-            transform: translateX(0) translateY(13%);
+            transform: translateX(0) translateY(15%);
         }
     }
 
-    @media print {
-        #curriculo {
-            width: 210mm;
-            height: 277mm;
-            margin: 0 auto;
-            top: -10%;
-            border: none;
-            box-shadow: none;
-            padding: 20px;
-            box-sizing: border-box;
-            page-break-before: auto;
-        }
+    @keyframes papelAnimado-reverse {
+    0% {
+        opacity: 1;
+        transform: translateX(0) translateY(15%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(-150%);
+    }
+}
+}
+
+@media print {
+    body {
+        background-color: #fff;
+    }
+
+    #curriculo {
+        width: 210mm;
+        height: 257mm;
+
+        margin: 0 auto;
+
+        top: -20px;
+
+        border: none;
+        box-shadow: none;
+        padding: 20px;
+        box-sizing: border-box;
+        page-break-before: auto;
+    }
+
+    #curriculo h1 {
+        width: 100%;
+        
+        text-align: center;
+        font-size: 26px;
+    }
+    
+    #sub_tittle {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    #curriculo h2 {
+        font-size: 18px;
+    }
+
+    header {
+        visibility: hidden;
+    }
+
+    #about {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .popup {
+        display: none;
+    }
+
+    #porta_imprimir {
+        display: none;
+    }
+
+    #botoes_papel {
+        visibility: hidden;
     }
 }

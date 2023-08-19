@@ -1,3 +1,19 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // Este evento é disparado quando o DOM é carregado (a estrutura HTML está pronta)
+
+    // Esconde o elemento de carregamento
+    document.getElementById("loading").style.display = "none";
+});
+
+window.onload = function () {
+    // Este evento é disparado quando todos os recursos são carregados
+
+    // Esconde o elemento de carregamento novamente, apenas por precaução
+    document.getElementById("loading").style.display = "none";
+};
+
+//-------------------------------------------------------------------------
+
 close_msg.addEventListener("click", () => {
     msg_abertura.style.display = 'none';
 });
@@ -189,3 +205,26 @@ for (let i = 0; i < botoes.length; i++) {
         som.play();
     });
 }
+
+//-----------------------------------------------------------------------------
+const cardContainer = document.getElementById("container_card");
+const card = document.querySelector(".card");
+
+// Evento de toque para dispositivos móveis
+cardContainer.addEventListener("touchstart", function() {
+    card.style.transform = "rotateY(180deg)";
+});
+
+// Evento de toque para voltar à frente quando tocar novamente
+cardContainer.addEventListener("touchend", function() {
+    card.style.transform = "rotateY(0deg)";
+});
+
+// Evento de hover para desktop
+cardContainer.addEventListener("mouseenter", function() {
+    card.style.transform = "rotateY(180deg)";
+});
+
+cardContainer.addEventListener("mouseleave", function() {
+    card.style.transform = "rotateY(0deg)";
+});

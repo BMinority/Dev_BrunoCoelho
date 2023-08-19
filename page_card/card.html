@@ -9,16 +9,20 @@
     <link rel="stylesheet" href="/page_card/card.css">
 </head>
 <body>
+    <div class="loading-container" id="loading">
+        <div class="spinner"></div>
+    </div>
+    
     <div class="container">
 
         <section id="msg_abertura">
             <div>
                 <h1>Obrigado por visitar o meu site!</h1>
                 <h3>Aqui está um pequeno mimo para você, visitante.</h3>
-                <h3>Crie seu prório cartão de visita com um tema víntage.
+                <h4>Crie seu prório cartão de visita com um tema víntage.
                     Ao terminar, você poderá salvar/imprimir seu cartão.
                     Também pode optar por baixar as faces do seu cartão como imagem PNG.
-                </h3>
+                </h4>
 
                 <button id="close_msg">X</button>
             </div>
@@ -80,34 +84,6 @@
             </form>
         </section>
 
-        <nav id="menu_btn">
-
-            <button id="house" class="btn">
-                <i class="fa-solid fa-house"></i>
-            </button>
-            
-            <button id="clean" class="btn">
-                <i class="fa-solid fa-eraser"></i>
-            </button>
-
-            <button id="save_frente" class="btn">
-                <i class="fa-solid fa-file-image"></i>
-            </button>
-
-            <button id="save_verso" class="btn">
-                <i class="fa-regular fa-file-image"></i>
-            </button>
-
-            <button id="save" class="btn">
-                <i class="fa-solid fa-download"></i>
-            </button>
-
-            <button id="help" class="btn">
-                <i class="fa-solid fa-circle-info"></i>
-            </button>
-
-        </nav>
-
         <audio id="som-efeito">
             <source src="/Sounds/150382__orginaljun__soft-sound-plastic-button-click.mp3" type="audio/mpeg">
         </audio>
@@ -116,8 +92,8 @@
 
             <h2>Informações</h2>
             <p> - Sua logo deve ter um tamanho de 1080x1080px.</p>
-            <p> - Passe o mouse sobre o cartão para ver o verso.</p>
-            <p> - Caso a imagem de impressão não esteja aparecendo colorida,
+            <p> - Passe o mouse sobre o cartão ou toque na tela sobre o cartão e segure para ver o verso.</p>
+            <p class="info_print"> - Caso a imagem de impressão não esteja aparecendo colorida,
                 ative "Gráficos de segundo plano" do seu navegados.
             </p>
 
@@ -126,6 +102,34 @@
         </section>
 
     </div>
+
+    <nav id="menu_btn">
+
+        <button id="house" class="btn">
+            <i class="fa-solid fa-house"></i>
+        </button>
+        
+        <button id="clean" class="btn">
+            <i class="fa-solid fa-eraser"></i>
+        </button>
+
+        <button id="save_frente" class="btn">
+            <i class="fa-solid fa-file-image"></i>
+        </button>
+
+        <button id="save_verso" class="btn">
+            <i class="fa-regular fa-file-image"></i>
+        </button>
+
+        <button id="save" class="btn">
+            <i class="fa-solid fa-download"></i>
+        </button>
+
+        <button id="help" class="btn">
+            <i class="fa-solid fa-circle-info"></i>
+        </button>
+
+    </nav>
 
     <script src="/page_card/card.js"></script>
 </body>

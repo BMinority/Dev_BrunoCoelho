@@ -8,6 +8,10 @@
     <title>Dev_Bruno Coelho</title>
 </head>
 <body>
+    <div class="loading-container" id="loading">
+        <div class="spinner"></div>
+    </div>
+
     <header id="cabecalho">
         <h1>Bruno Coelho</h1>
         <p>Desenvolvedor Front-End e Designer Gráfico</p>
@@ -23,7 +27,7 @@
 
         <section id="curriculo" class="paper_sheet animation-paused">
             <h1>Bruno Coelho</h1>
-            <h2>Desenvolvedor Front-end e designer gráfico</h2>
+            <h2 id="sub_tittle">Desenvolvedor Front-end e designer gráfico</h2>
             <p>Rua Joaquim Francisco, 272, apto 201, Carpina, PE.</p>
             <p><b>E-mail</b>: brunocoelho66@gmail.com</p>
             <p><b>Telefone:</b> (81) 98920-6365</p>
@@ -68,6 +72,7 @@
             <p>Olá! Sou um aspirante a programador front-end com experiência como operador de caixa e designer gráfico. 
                 Meu objetivo é criar interfaces web atraentes e funcionais, combinando minhas habilidades em design e desenvolvimento.
             </p>
+            <p>Fique a vontade para navegar pelo menu abaixo.</p>
         </section>
 
         <nav id="buttons" class="buttons">
@@ -133,13 +138,15 @@
         <section id="experience" class="popup">
             <h2>Experiência</h2>
 
-            <h3>Operador de Caixa - Drogatim Drogarias LTDA/Farmácia Permanente (2016-2020)</h3>
-            <p>Responsável por iniciar e finalizar o atendimento ao público. Outras atribuíções incluíam:
-                 Controle de estoque de mercadorias, limpeza de gôndolas e do ambiente de trabalho, participação
-                no balanço trimestral de mercadorias e auxíliar o atendimento no balcão de farmácia.</p>
-
-            <h3>Designer Gráfico - Autônomo (desde 2020)</h3>
-            <p>Criação de artes personalizadas e vetores para: logotipo, banners, cartazes, mídia pra redes sociais, etc.</p>
+            <div id="box_xp">
+                <h2>Operador de Caixa - Drogatim Drogarias LTDA/Farmácia Permanente (2016-2020)</h2>
+                <p>Responsável por iniciar e finalizar o atendimento ao público. Outras atribuíções incluíam:
+                     Controle de estoque de mercadorias, limpeza de gôndolas e do ambiente de trabalho, participação
+                    no balanço trimestral de mercadorias e auxíliar o atendimento no balcão de farmácia.</p>
+    
+                <h2>Designer Gráfico - Autônomo (desde 2020)</h2>
+                <p>Criação de artes personalizadas e vetores para: logotipo, banners, cartazes, mídia pra redes sociais, etc.</p>
+            </div>
 
             <i class="fa-solid fa-rectangle-xmark" id="fechar"></i>
         </section>
@@ -182,11 +189,13 @@
 
             <i class="fa-solid fa-rectangle-xmark" id="fechar"></i>
         </section>
+
+        <footer id="rodape">
+            <p>Todos os direitos reservados &copy; 2023 Bruno Coelho</p>
+        </footer>
+
     </main>
 
-    <footer id="rodape">
-        <p>Todos os direitos reservados &copy; 2023 Bruno Coelho</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>

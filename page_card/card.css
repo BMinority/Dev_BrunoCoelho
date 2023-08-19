@@ -4,11 +4,80 @@
     box-sizing: border-box;
 }
 
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(77, 11, 6);
+
+    z-index: 999999;
+
+    position: absolute;
+}
+  
+.spinner {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1.5s linear infinite;
+}
+  
+.spinner:before,
+.spinner:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+  
+.spinner:before {
+    background-color: burlywood;
+    opacity: 0.2;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+  
+  .spinner:after {
+    background-color: rgb(192, 141, 75);
+    animation: pulse 0.75s ease-in-out infinite;
+}
+  
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+}
+
 body {
     background-color: rgb(97, 16, 10);
 
     display: flex;
     flex-direction: column;
+
+    align-items: center;
 }
 
 body::-webkit-scrollbar {
@@ -39,7 +108,7 @@ body::-webkit-scrollbar {
 
     z-index: 9999;
 
-    width: 70%;
+    width: 50%;
     height: auto;
 
     padding: 20px;
@@ -67,7 +136,7 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 
-#msg_abertura h1, h3 {
+#msg_abertura h1, h3, h4 {
     margin-bottom: 10px;
 }
 
@@ -135,9 +204,6 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
 
-/*
-    background-image: url(/IMG_logo/SUA_LOGO_AQUI.png);
-*/
 }
 
 .imagePreview {
@@ -216,21 +282,14 @@ textarea {
 }
 
 #menu_btn {
-    position: absolute;
-    
-    z-index: 999;
-
-    bottom: 0;
-
-    margin-bottom: 20px;
 
     width: auto;
     gap: 20px;
 
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    margin-top: 1.5rem;
 }
 
 #menu_btn button {
@@ -356,6 +415,7 @@ textarea {
     body {
         background-color: #fff;
     }
+
     #menu_btn {
         display: none;
     }
@@ -419,10 +479,36 @@ textarea {
         background-image: linear-gradient(to right, rgb(44, 28, 6), rgb(100, 69, 27), rgb(133, 101, 59), rgb(155, 125, 85), rgb(133, 101, 59), rgb(100, 69, 27), rgb(44, 28, 6));
 
         color: #fff;
+
+        transform: rotateY(0deg);
+
     }
 }
 
 @media (max-width: 720px) {
+    #container_card {
+        width: 100%;
+        height: 30vh;
+
+    }
+
+    #frente {
+
+    background-image: linear-gradient(45deg, rgb(44, 28, 6), rgb(100, 69, 27), 
+    rgb(133, 101, 59), burlywood, rgb(133, 101, 59), rgb(100, 69, 27), 
+    rgb(44, 28, 6));
+
+    }
+
+    #verso {
+
+        background-image: linear-gradient(to right, rgb(44, 28, 6), rgb(100, 69, 27), 
+        rgb(133, 101, 59), rgb(155, 125, 85), rgb(133, 101, 59), rgb(100, 69, 27), 
+        rgb(44, 28, 6));
+
+        color: #fff;
+    }
+
     #container_form {
         width: 80%;
     }
@@ -439,23 +525,58 @@ textarea {
         bottom: 50px;
     }
 
+    #menu_btn {
+        gap: 15px;
+    }
+
     #menu_btn button {
-        margin-bottom: 24px;
+        width: 40px;
+        height: 40px;
+
+        padding: 5px;
+
+        text-align: center;
+
+        border: rgb(153, 134, 107) solid 3px;
+
+        background-color: rgb(233, 211, 182);
+
+        box-shadow: inset 0 0 12px 1px black, 5px 6px 5px 3px rgba(0, 0, 0, 0.616);
+
+    }
+
+    #menu_btn button i {
+        font-size: 18px;
+    }
+
+    #save {
+        display: none;
+    }
+
+    .info_print {
+        display: none;
+    }
+
+    .popup {
+        width: 95%;
+
+        top: 20%;
+        background-color: rgb(233, 211, 182);
     }
 
 }
 
 @media (max-width: 600px) {
-    #menu_btn button {
-    
-        width: 50px;
-        height: 50px;
 
-        bottom: 30px;
-    
-    }
-    
-    #menu_btn button i {
-        font-size: 20px;
+    #msg_abertura {
+
+    width: 95%;
+
+    background-color: rgb(233, 211, 182);
+    border: rgb(61, 42, 16) solid 5px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 18px 1px black,  2px 5px 5px black;
+    color: black;
+
     }
 }
