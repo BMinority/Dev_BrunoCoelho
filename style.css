@@ -134,7 +134,7 @@ header p {
 
     100% {
         opacity: 1;
-        transform: translateX(0) translateY(-100%);
+        transform: translateX(0) translateY(-200%);
     }
 }
 
@@ -160,38 +160,6 @@ header p {
 
 #curriculo ul {
     margin-left: 15px;
-}
-
-@media print {
-    #curriculo {
-        width: 210mm;
-        height: 287mm;
-
-        margin: 0 auto;
-
-        top: -10%;
-
-        border: none;
-
-        box-shadow: none;
-
-        padding: 20px;
-        box-sizing: border-box;
-
-        page-break-before: auto;
-    }
-
-    body {
-        background-color: #fff;
-    }
-
-    header {
-        display: none;
-    }
-
-    #porta_imprimir {
-        display: none;
-    }
 }
 
 #botoes_papel {
@@ -306,7 +274,6 @@ section p {
 
 #buttons button {
     border-radius: 50%;
-    border: none;
     width: 70px;
     height: 70px;
     padding: 5px;
@@ -464,24 +431,34 @@ footer a {
     }
 
     #porta_imprimir {
-        width: 78%;
+        width: 95%;
     }
 
     #buttons {
-        gap: 8px;
+        gap: 15px;
     }
 
     #buttons button {
         width: 40px;
         height: 40px;
+
+        border: rgb(153, 134, 107) solid 3px;
+
+        background-color: rgb(233, 211, 182);
     }
 
     #buttons i {
         font-size: 14px;
     }
 
+    .popup {
+        background-color: rgb(233, 211, 182);
+    }
+
     #about {
         width: 95%;
+
+        background-color: rgb(233, 211, 182);
     }
 
     #about p {
@@ -543,7 +520,7 @@ footer a {
     }
 
     #botoes_slide {
-    bottom: 3px;
+        bottom: 3px;
     }
 
     #contact {
@@ -557,7 +534,7 @@ footer a {
     }
 
     #curriculo {
-        width: 75%;
+        width: 93%;
     }
 
     #curriculo h1 {
@@ -599,40 +576,69 @@ footer a {
 
         100% {
             opacity: 1;
-            transform: translateX(0) translateY(11%);
+            transform: translateX(0) translateY(13%);
         }
     }
+}
 
-    @media print {
-        #curriculo {
-            width: 210mm;
-            height: 277mm;
+@media print {
+    body {
+        background-color: #fff;
+    }
 
-            margin: 0 auto;
+    #curriculo {
+        width: 210mm;
+        height: 257mm;
 
-            top: 0;
+        margin: 0 auto;
 
-            border: none;
-            box-shadow: none;
-            padding: 20px;
-            box-sizing: border-box;
-            page-break-before: auto;
-        }
+        top: -20px;
 
-        #curriculo h1 {
-            font-size: 22px;
-        } 
+        border: none;
+        box-shadow: none;
+        padding: 20px;
+        box-sizing: border-box;
+        page-break-before: auto;
+    }
 
-        #curriculo h2 {
-            font-size: 18px;
-        }
+    #curriculo h1 {
+        width: 100%;
+        
+        text-align: center;
+        font-size: 26px;
+    }
+    
+    #sub_tittle {
+        width: 100%;
 
-        #copia_header, #about, nav, .popup {
-            display: none;
-        }
+        text-align: center;
+    }
 
-        #botoes_papel {
-            visibility: hidden;
-        }
+    #curriculo h2 {
+        font-size: 18px;
+    }
+
+    header {
+        visibility: hidden;
+    }
+
+    #about {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .popup {
+        display: none;
+    }
+
+    #porta_imprimir {
+        display: none;
+    }
+
+    #botoes_papel {
+        visibility: hidden;
     }
 }
