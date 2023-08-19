@@ -189,3 +189,26 @@ for (let i = 0; i < botoes.length; i++) {
         som.play();
     });
 }
+
+//-----------------------------------------------------------------------------
+const cardContainer = document.getElementById("container_card");
+const card = document.querySelector(".card");
+
+// Evento de toque para dispositivos móveis
+cardContainer.addEventListener("touchstart", function() {
+    card.style.transform = "rotateY(180deg)";
+});
+
+// Evento de toque para voltar à frente quando tocar novamente
+cardContainer.addEventListener("touchend", function() {
+    card.style.transform = "rotateY(0deg)";
+});
+
+// Evento de hover para desktop
+cardContainer.addEventListener("mouseenter", function() {
+    card.style.transform = "rotateY(180deg)";
+});
+
+cardContainer.addEventListener("mouseleave", function() {
+    card.style.transform = "rotateY(0deg)";
+});
