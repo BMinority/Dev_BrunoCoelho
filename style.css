@@ -448,7 +448,8 @@ footer {
     text-align: center;
     padding: 1rem;
     color: #fff;
-    position: fixed;
+
+    margin-top: 130px;
     bottom: 0;
 }
 
@@ -458,26 +459,47 @@ footer a {
 }
 
 @media (max-width: 720px) {
+    section h2 {
+        font-size: 22px;
+    }
+
     #porta_imprimir {
         width: 78%;
     }
 
+    #buttons {
+        gap: 8px;
+    }
+
     #buttons button {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
     }
 
     #buttons i {
-        font-size: 22px;
+        font-size: 14px;
+    }
+
+    #about {
+        width: 95%;
+    }
+
+    #about p {
+        font-size: 9.5px;
     }
 
     #skills {
-        top: 45%;
+        top: 50%;
+
+        width: 95%;
+
         display: flex;
         flex-wrap: wrap;
+
         list-style: none;
         padding: 0;
         margin: 0;
+
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -490,18 +512,48 @@ footer a {
     }
 
     #experience {
-        width: 85%;
-        top: 40%;
+        top: 50%;
+
+        width: 95%;
+        height: 70vh;
+
+        font-size: 12px;
+    }
+
+    #box_xp {
+        text-align:left;
+
+        width: 100%;
+        height: 50vh;
+
+        overflow: auto;
+    }
+
+    #box_xp p {
+        width: 100%;
+
+        margin-bottom: 10px;
+
+        text-align: justify;
     }
 
     #education {
-        width: 85%;
+        width: 95%;
         top: 40%;
     }
 
+    #botoes_slide {
+    bottom: 3px;
+    }
+
     #contact {
-        width: 80%;
-        top: 40%;
+        width: 95%;
+        top: 50%;
+    }
+
+    #contact p {
+        width: 100%;
+        text-align: justify;
     }
 
     #curriculo {
@@ -534,6 +586,11 @@ footer a {
         padding: 5px;
     }
 
+    footer {
+        font-size: 10px;
+        margin-top: 30px;
+    }
+
     @keyframes papelAnimado {
         0% {
             opacity: 1;
@@ -542,7 +599,7 @@ footer a {
 
         100% {
             opacity: 1;
-            transform: translateX(0) translateY(13%);
+            transform: translateX(0) translateY(11%);
         }
     }
 
@@ -550,13 +607,32 @@ footer a {
         #curriculo {
             width: 210mm;
             height: 277mm;
+
             margin: 0 auto;
-            top: -10%;
+
+            top: 0;
+
             border: none;
             box-shadow: none;
             padding: 20px;
             box-sizing: border-box;
             page-break-before: auto;
+        }
+
+        #curriculo h1 {
+            font-size: 22px;
+        } 
+
+        #curriculo h2 {
+            font-size: 18px;
+        }
+
+        #copia_header, #about, nav, .popup {
+            display: none;
+        }
+
+        #botoes_papel {
+            visibility: hidden;
         }
     }
 }
