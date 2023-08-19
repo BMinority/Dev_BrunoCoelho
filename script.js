@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-document.addEventListener("DOMContentLoaded", function () {
-    // Este evento é disparado quando o DOM é carregado (a estrutura HTML está pronta)
-
-    // Esconde o elemento de carregamento
-    document.getElementById("loading").style.display = "none";
-});
-
-window.onload = function () {
-    // Este evento é disparado quando todos os recursos são carregados
-
-    // Esconde o elemento de carregamento novamente, apenas por precaução
-    document.getElementById("loading").style.display = "none";
-};
-
 //---------------------------------------------------------------
 const caixaPopup = document.querySelectorAll('.popup');
 
