@@ -48,6 +48,7 @@ main {
 }
 
 header {
+    height: 20vh;
 
     text-align: center;
     padding: 2rem 0;
@@ -66,7 +67,7 @@ header p {
 #copia_header {
 
     background-color: rgb(77, 11, 6);
-    border-bottom: black solid 5px;
+    border-bottom: black solid 8px;
 
     width: 100%;
 
@@ -82,11 +83,11 @@ header p {
     position: relative;
 
     width: 58%;
-    height: 2vh;
+    height: 1.5vh;
 
     background-color: black;
 
-    border-radius: 8px;
+    border-radius: 2px;
 }
 
 .paper_sheet {
@@ -114,7 +115,7 @@ header p {
 
     100% {
         opacity: 1;
-        transform: translateX(0) translateY(12%);
+        transform: translateX(0) translateY(10%);
     }
 }
 
@@ -216,6 +217,7 @@ header p {
 
 section {
     max-width: 800px;
+    height: auto;
 
     margin: 1rem auto;
 
@@ -234,20 +236,6 @@ section p {
     line-height: 1.8;
 }
 
-.popup {
-    background-color: burlywood;
-    border: rgb(61, 42, 16) solid 5px;
-    box-shadow: inset 0 0 18px 1px black,  2px 5px 5px black;
-    color: black;
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    z-index: 9999;
-}
-
 #about {
     width: 80%;
 
@@ -261,6 +249,22 @@ section p {
 
 #about p {
     font-weight:bold;
+
+    font-size: 1rem;
+}
+
+.popup {
+    background-color: burlywood;
+    border: rgb(61, 42, 16) solid 5px;
+    box-shadow: inset 0 0 18px 1px black,  2px 5px 5px black;
+    color: black;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 9999;
 }
 
 #buttons {
@@ -414,8 +418,9 @@ section p {
 
 footer {
     width: 100%;
+
     text-align: center;
-    padding: 1rem;
+
     color: #fff;
 
     margin-top: 130px;
@@ -429,12 +434,34 @@ footer a {
 
 @media (max-width: 720px) {
 
+    body {
+        width: 100%;
+        height: auto;
+    }
+
+    header {
+
+        padding: 1rem 0;
+
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }    
+
     section h2 {
         font-size: 22px;
     }
 
     #porta_imprimir {
         width: 95%;
+        height: 1vh;
+
+        border-radius: 2px;
     }
 
     #buttons {
@@ -473,7 +500,7 @@ footer a {
     }
 
     #about p {
-        font-size: 9.5px;
+        font-size: 0.6rem;
     }
 
     #skills {
@@ -552,11 +579,11 @@ footer a {
         font-size: 22px;
     }
 
-        #curriculo h2 {
+    #curriculo h2 {
         font-size: 18px;
     }
 
-        #curriculo p {
+    #curriculo p {
         font-size: 14px;
     }
 
@@ -575,8 +602,7 @@ footer a {
     }
 
     footer {
-        font-size: 10px;
-        margin-top: 50px;
+        font-size: 0.7rem;
     }
 
     @keyframes papelAnimado {
@@ -587,21 +613,21 @@ footer a {
 
         100% {
             opacity: 1;
-            transform: translateX(0) translateY(15%);
+            transform: translateX(0) translateY(9%);
         }
     }
 
     @keyframes papelAnimado-reverse {
-    0% {
-        opacity: 1;
-        transform: translateX(0) translateY(15%);
-    }
+        0% {
+            opacity: 1;
+            transform: translateX(0) translateY(9%);
+        }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0) translateY(-150%);
+        100% {
+            opacity: 1;
+            transform: translateX(0) translateY(-100%);
+        }
     }
-}
 }
 
 @media print {

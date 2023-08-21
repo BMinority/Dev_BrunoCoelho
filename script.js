@@ -97,7 +97,7 @@ document.getElementById('print').addEventListener('click', function () {
     let boxBtns = document.querySelector("#buttons");
     let footer = document.querySelector("#rodape");
 
-    // Esconder os botões antes de imprimir
+    // Esconder tags antes de imprimir
     botoesPapelDiv.style.display = 'none';
     cabecalhoDiv.style.display = 'none';
     cabecalho2Div.style.display = 'none';
