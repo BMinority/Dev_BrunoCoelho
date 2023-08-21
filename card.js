@@ -6,7 +6,7 @@ close_msg.addEventListener("click", () => {
 
 const buttonHouse = document.getElementById("house");
 buttonHouse.addEventListener("click", () => {
-    window.location.href = "/index.html"
+    window.location.href = "./"
 });
 
 //----------------------------------------------------------------
@@ -133,7 +133,7 @@ function readImage() {
 }
 
 function clearPreview() {
-    document.getElementById("logo_preview").src = "./imgLogo/SUA_LOGO_AQUI.png";
+    document.getElementById("logo_preview").src = "imgLogo/SUA_LOGO_AQUI.png";
 }
 
 document.getElementById("img-input").addEventListener("change", readImage, false);
