@@ -133,7 +133,7 @@ function readImage() {
 }
 
 function clearPreview() {
-    document.getElementById("logo_preview").src = "/IMG_logo/SUA_LOGO_AQUI.png";
+    document.getElementById("logo_preview").src = "../imgLogo/SUA_LOGO_AQUI.png";
 }
 
 document.getElementById("img-input").addEventListener("change", readImage, false);
