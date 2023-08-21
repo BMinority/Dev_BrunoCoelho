@@ -123,6 +123,6 @@ const button = document.getElementById("box-present");
 
 button.addEventListener("click", function() {
 
-    window.location.href = "PageCard/card.html";
+    window.location.href = "/PageCard/card.html";
 
 });
