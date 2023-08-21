@@ -615,14 +615,14 @@ footer a {
 
         100% {
             opacity: 1;
-            transform: translateX(0) translateY(9%);
+            transform: translateX(0) translateY(11%);
         }
     }
 
     @keyframes papelAnimado-reverse {
         0% {
             opacity: 1;
-            transform: translateX(0) translateY(9%);
+            transform: translateX(0) translateY(11%);
         }
 
         100% {
