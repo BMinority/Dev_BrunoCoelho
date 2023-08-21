@@ -6,7 +6,7 @@ close_msg.addEventListener("click", () => {
 
 const buttonHouse = document.getElementById("house");
 buttonHouse.addEventListener("click", () => {
-    window.location.href = "index.html"
+    window.location.href = "/index.html"
 });
 
 //----------------------------------------------------------------
