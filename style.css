@@ -282,12 +282,18 @@ section p {
 
 #buttons button {
     border-radius: 50%;
+
     width: 70px;
     height: 70px;
+
     padding: 5px;
+
     margin-bottom: 5px;
+
     cursor: pointer;
+
     transition: 0.2s;
+
     background-color: burlywood;
     border: rgb(153, 134, 107) solid 5px;
     box-shadow: inset 0 0 18px 1px black, 5px 6px 5px 3px rgba(0, 0, 0, 0.616);
@@ -301,7 +307,6 @@ section p {
 
 #buttons i {
     font-size: 32px;
-    margin-bottom: 5px;
 }
 
 #skills {
@@ -426,7 +431,6 @@ footer {
     color: #fff;
 
     margin-top: 130px;
-    bottom: 0;
 }
 
 header a,
@@ -442,6 +446,8 @@ footer a {
     }
 
     header {
+
+        height: 20vh;
 
         padding: 1rem 0;
 
@@ -467,12 +473,18 @@ footer a {
     }
 
     #buttons {
-        gap: 15px;
+        width: 60%;
+
+        gap: 12px;
+
+        margin-top: 2px;
+
+        justify-content: space-around;
     }
 
     #buttons button {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
 
         padding: 5px;
 
@@ -486,7 +498,7 @@ footer a {
     }
 
     #buttons i {
-        font-size: 18px;
+        font-size: 22px;
 
         opacity: 80%;
     }
@@ -499,10 +511,12 @@ footer a {
         width: 95%;
 
         background-color: rgb(233, 211, 182);
+
+        padding: 10px;
     }
 
     #about p {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 
     #skills {
@@ -605,6 +619,8 @@ footer a {
 
     footer {
         font-size: 0.7rem;
+
+        margin-top: 1.5vh;
     }
 
     @keyframes papelAnimado {
