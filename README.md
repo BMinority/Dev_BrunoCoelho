@@ -41,5 +41,5 @@ A imagem acima foi editada apenas para demonstração.
 
 
 ## Autor
-Bruno Celho Muniz Silva
+Bruno Coelho Muniz Silva
 [Linkedin](https://www.linkedin.com/in/bruno-coelho-97b630220/)
