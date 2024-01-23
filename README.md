@@ -1,5 +1,7 @@
 # Dev Bruno Coelho
 ## Desenvolvedor front-end e Designer Gráfico
+### Esta foi uma primeira versão do meu site pessoal
+### Uma versão mais recente está disponível no meu github e linkedin
 
 ![Página Inicial](./Assets/1.png)
 Site pessoal utilizado como currículo virtual.
